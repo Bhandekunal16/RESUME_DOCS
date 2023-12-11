@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Curriculum Vitae</title>
   </head>
-  <body onload="notification()">
+  <body>
     <div class="main">
       <h1>Curriculum Vitae</h1>
       <div class="content">
@@ -78,6 +78,12 @@
         </div>
       </div>
 
+      <div id="myModal" class="modal">
+        <p>follow me on linkdin .. </p>
+        <button onclick="Watched()" class="close-button">close</button>
+        <button class="primary-button"><a href="https://www.linkedin.com/in/kunal-bhande-2a0582271?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">click</a></button>
+      </div>
+
       <div class="content">
         <div id="persnal-info">
           <div id="header">
@@ -136,6 +142,8 @@
           </div>
         </div>
       </div>
+
+     
 
       <div class="content">
         <div id="persnal-info">
@@ -235,7 +243,7 @@
           </thead>
           <tbody id="project-table-body"></tbody>
         </table>
-        <div id="persnal-info">
+        <div id="persnal-info" onmouseover="notification()">
           <h1>About me</h1>
           <div id="about-content">
             <p>

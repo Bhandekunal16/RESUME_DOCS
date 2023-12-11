@@ -114,19 +114,15 @@ function hideText(index) {
 }
 
 function notification() {
-  if ("Notification" in window) {
-    Notification.requestPermission().then((permission) => {
-      if (permission === "granted") {
-        const notification = new Notification("Default Notification", {
-          body: "This is a default notification!",
-        });
+  document.getElementById("myModal").style.display = "block";
 
-        notification.onclick = function () {
-          console.log("Notification clicked");
-        };
-      }
-    });
-  } else {
-    console.log("Notification API not supported");
-  }
+  window.onclick = function (event) {
+    if (event.target === document.getElementById("myModal")) {
+      document.getElementById("myModal").style.display = "none";
+    }
+  };
+}
+
+function Watched() {
+  document.getElementById("myModal").style.display = "none";
 }
