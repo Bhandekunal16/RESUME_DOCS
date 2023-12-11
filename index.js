@@ -71,3 +71,11 @@ var data = [
   
     document.querySelector(`.img:nth-child(${index}) img`).style.display = 'block';
   }
+
+  function showText(index) {
+    document.getElementById(`text-${index}`).style.display = 'block';
+  }
+  
+  function hideText(index) {
+    document.getElementById(`text-${index}`).style.display = 'none';
+  }
