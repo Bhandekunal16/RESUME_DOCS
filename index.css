@@ -51,7 +51,7 @@
     overflow: auto;
     max-width: 100vw;
     max-height: 100vh;
-    flex-direction: row; /* Changed to row for horizontal alignment */
+    flex-direction: row; 
     align-items: center;
     border-radius: 8px;
   }
@@ -59,8 +59,8 @@
   .tab {
     position: relative;
     cursor: pointer;
-    margin: 0 10px; /* Adjust margin as needed */
-    transition: opacity 0.3s; /* Fade effect */
+    margin: 0 10px; 
+    transition: opacity 0.3s; 
   }
   
   .tab:hover {
