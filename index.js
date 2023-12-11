@@ -64,4 +64,10 @@ var data = [
     tbody.appendChild(row);
   });
   
- 
+  function changeImage(index) {
+  
+    document.querySelectorAll('.img img').forEach(img => img.style.display = 'none');
+  
+  
+    document.querySelector(`.img:nth-child(${index}) img`).style.display = 'block';
+  }
