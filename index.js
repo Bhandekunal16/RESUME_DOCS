@@ -97,32 +97,68 @@ data.forEach(function (item) {
 });
 
 function changeImage(index) {
-  document
-    .querySelectorAll(".img img")
-    .forEach((img) => (img.style.display = "none"));
+  try {
+    document
+      .querySelectorAll(".img img")
+      .forEach((img) => (img.style.display = "none"));
 
-  document.querySelector(`.img:nth-child(${index}) img`).style.display =
-    "block";
+    document.querySelector(`.img:nth-child(${index}) img`).style.display =
+      "block";
+  } catch (error) {
+    return error;
+  }
 }
 
 function showText(index) {
-  document.getElementById(`text-${index}`).style.display = "block";
+  try {
+    document.getElementById(`text-${index}`).style.display = "block";
+  } catch (error) {
+    return error;
+  }
 }
 
 function hideText(index) {
-  document.getElementById(`text-${index}`).style.display = "none";
+  try {
+    document.getElementById(`text-${index}`).style.display = "none";
+  } catch (error) {
+    return error;
+  }
 }
 
 function notification() {
-  document.getElementById("myModal").style.display = "block";
+  try {
+    document.getElementById("myModal").style.display = "block";
 
-  window.onclick = function (event) {
-    if (event.target === document.getElementById("myModal")) {
-      document.getElementById("myModal").style.display = "none";
-    }
-  };
+    window.onclick = function (event) {
+      if (event.target === document.getElementById("myModal")) {
+        document.getElementById("myModal").style.display = "none";
+      }
+    };
+  } catch (error) {
+    return error;
+  }
 }
 
 function Watched() {
-  document.getElementById("myModal").style.display = "none";
+  try {
+    document.getElementById("myModal").style.display = "none";
+  } catch (error) {
+    return error;
+  }
+}
+
+function downloadPDF() {
+  try {
+    var element = document.body;
+
+    html2pdf(element, {
+      margin: 10,
+      filename: "resume.pdf",
+      image: { type: "jpeg", quality: 0.98 },
+      html2canvas: { scale: 2 },
+      jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
+    });
+  } catch (error) {
+    return error;
+  }
 }
