@@ -153,7 +153,7 @@ function downloadPDF() {
 
     html2pdf(element, {
       margin: 10,
-      filename: "resume.pdf",
+      filename: "projectDocs-kunalBhande.pdf",
       image: { type: "jpeg", quality: 0.98 },
       html2canvas: { scale: 6 },
       jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },

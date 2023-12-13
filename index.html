@@ -232,6 +232,11 @@
         </div>
       </div>
 
+      <div class="Download-button">
+        <button onclick="downloadPDF()" class="primary-button">Download Project table</button>
+      </div>
+      
+
       <div class="content">
         <table class="project-table" id="persnal-info">
           <thead>
@@ -242,6 +247,7 @@
             </tr>
           </thead>
           <tbody id="project-table-body"></tbody>
+          
         </table>
         <div id="persnal-info" onmouseover="notification()">
           <h1>About me</h1>
@@ -266,7 +272,7 @@
           </div>
         </div>
       </div>
-      <button onclick="downloadPDF()">Download PDF</button>
+      
     
       
       <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
